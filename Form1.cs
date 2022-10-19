@@ -180,7 +180,7 @@ public partial class FormPong : Form
             return;
         }
 
-        ball.X = pictureBoxDisplay.Width - (Bat.c_batDistanceFromEdgeX + 4);
+        ball.X = pictureBoxDisplay.Width - (Bat.c_batDistanceFromEdgeX + 7);
 
         ball.BounceBallOffBat(whereBallHitBat);
 
