@@ -1,6 +1,6 @@
 # pong-3.0
 
-From the blog post: https://aimlfun.com/a-better-pong/
+From blog posting: https://aimlfun.com/a-better-pong/
 
 This application requires .net6 and Visual Studio 2022 (Community works).
 
