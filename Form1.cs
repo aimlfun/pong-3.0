@@ -327,8 +327,8 @@ public partial class FormPong : Form
         // neural network controls left bat.
         if (currentTrainingDataItem is not null)
         {
-            batOnTheLeftControlledByAI.Move((int)Math.Round(neuralNetworkControllingLeftBat.FeedForward(currentTrainingDataItem.ToArray(pictureBoxDisplay.Height))[0] * Height));
-            batOnTheLeftControlledByAI.Move((int)Math.Round(neuralNetworkControllingLeftBat.FeedForward(currentTrainingDataItem.ToArray(pictureBoxDisplay.Height))[0] * Height));
+            batOnTheLeftControlledByAI.Move((int)Math.Round(neuralNetworkControllingLeftBat.FeedForward(currentTrainingDataItem.ToArray(pictureBoxDisplay.Height))[0] * pictureBoxDisplay.Height));
+            batOnTheLeftControlledByAI.Move((int)Math.Round(neuralNetworkControllingLeftBat.FeedForward(currentTrainingDataItem.ToArray(pictureBoxDisplay.Height))[0] * pictureBoxDisplay.Height));
         }
     }
 
@@ -339,7 +339,7 @@ public partial class FormPong : Form
     {
         foreach (TrainingDataItem tdi in TrainingDataItem.TrainingData)
         {
-            neuralNetworkControllingLeftBat.BackPropagate(tdi.ToArray(pictureBoxDisplay.Height), new double[] { tdi.YPositionOfTheBallWhenItArrivesOnLeftBatLine / Height });
+            neuralNetworkControllingLeftBat.BackPropagate(tdi.ToArray(pictureBoxDisplay.Height), new double[] { tdi.YPositionOfTheBallWhenItArrivesOnLeftBatLine / pictureBoxDisplay.Height });
         }
     }
 
